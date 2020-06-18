@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #F59C1F;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1650px;
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header {
+    position: absolute;
+    top: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header img {
+    width: 12vw;
+    animation: start 3s .5s linear both;
+}
+
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5vw;
+    text-align: center;
+    background-color: transparent;
+    animation: start 3s .5s linear both;
+}
+
+div h2 {
+    padding-top: 5vh;
+    margin-bottom: 3vh;
+    border-top: .5px #F59C1F solid;
+    text-transform: uppercase;
+}
+
+div form {
+    text-align: center;
+}
+
+div form label {
+    display: block;
+    margin-bottom: 1vh;
+}
+
+
+div form input[type=text] {
+    display: inline-block;
+    margin-bottom: 2vh;
+    height: 4vh;
+    border: 1px #F59C1F solid;
+    border-radius: 15%;
+    color: #000000;
+    background-color: #999999;
+    font-family: arial, sans-serif;
+    text-align: center;
+}
+
+div form input[type=password] {
+    display: inline-block;
+    height: 4vh;
+    border: 1px #F59C1F solid;
+    border-radius: 15%;
+    color: #000000;
+    background-color: #999999;
+    font-family: arial, sans-serif;
+    text-align: center;
+}
+
+div form input[type=text]:focus {
+    background-color: #fff;
+    outline-color: #F29C15;
+    outline: none;
+}
+
+div form input[type=password]:focus {
+    background-color: #fff;
+    outline: none;
+}
+
+div button {
+    margin-top: 5vh;
+    width: 20vh;
+    height: 5vh;
+    border: 2px #F59C15 solid;
+    background-color: transparent;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+div button:hover {
+    background-color: #F59C15;
+    color: #323436;
+}
+
+/*MEDIA QUERIES*/
+
+@media (orientation: portrait) and (max-width: 1024px) {
+    header img {
+        width: 25vh;
+    }
+
+    div h2 {
+        font-size: 42px;
+    }
+
+    div form label {
+        font-size: 30px;
+    }
+
+    div form input[type=text] {
+    width: 40vw;
+    }
+
+div form input[type=password] {
+    width: 40vw;
+    }
+}
+
+
+/* ANIMATIONS */
+@keyframes start {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

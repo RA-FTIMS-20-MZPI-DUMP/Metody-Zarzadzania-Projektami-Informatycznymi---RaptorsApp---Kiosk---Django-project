@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'datastyle.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="icon" type="image/x-icon" href="http://raptors.p.lodz.pl/favicon.png">
+    <script src="https://kit.fontawesome.com/ed8b51afb9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+{% if user.is_authenticated %}
+    <a href="{%  url 'select' %}" class="back"><i class="fas fa-chevron-circle-left"></i></a>
+        <header>
+            <img src="{% static "raptuś_Obszar roboczy 1.png" %}" alt="raptors logo">
+        </header>
+        <div class="optionsDiv">
+            <div class="reloading" onclick="refresh()">
+                <i class="fas fa-sync-alt"></i>
+            </div>
+            <div class="statusfilter">
+                <span>Filter by status: </span>
+                <select id="selectField" onchange="FunctionStatus()">
+                    <option value="to do"  selected>---</option>
+                    <option value="new">new</option>
+                    <option value="to do">to do</option>
+                    <option value="in progress">in progress</option>
+                    <option value="done">done</option>
+                </select>
+            </div>
+            <div class="priorityfilter">
+                <span>Filter by priority: </span>
+                <select id="selectField2" onchange="FunctionPriority()">
+                    <option value="0"  selected>---</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="searchfilter">
+                <input type="text" id="myInput" onkeyup="FunctionSearch()" placeholder="Search for ID" spellcheck="false">
+            </div>
+        </div>
+    <table class="table table-bordered" border="1" id="myTable">
+        <tr><td colspan="8" class="title" id="mainHeader">TASKS</td></tr>
+        <tr class="header" id="titles">
+            <td onclick="sortTable(0)">ID<i class="fas fa-level-down-alt"></i></td>
+            <td onclick="sortTable(1)">Priority Weight<i class="fas fa-level-down-alt"></i></td>
+            <td onclick="sortTable(2)">Name<i class="fas fa-level-down-alt"></i></td>
+            <td onclick="sortTable(3)">Status<i class="fas fa-level-down-alt"></i></td>
+        </tr>
+            {% for tasks in list %}
+            <tr class="filtering">
+                <td class="sortable">{{ tasks.id }}</td>
+                <td class="sortable">{{ tasks.priority.weight }}</td>
+                <td class="sortable">{{ tasks.name }}</td>
+                <td class="sortable">{{ tasks.status }}</td>
+{#                <td>{{ tasks.userID }}</td>#}
+            </tr>
+        {% endfor %}
+ </table>
+    <script src="{% static 'scriptData.js' %}"></script>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+</body>
+</html>

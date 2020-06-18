@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania</title>
+</head>
+
+<body>
+<a href="{% url 'home' %}">Wróć do wyboru kiosków</a>
+</body>
+
+
+<p>Poniżej podaj informacje dotyczące operacji, którą chcesz wykonać</p>
+<form method="POST"> {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Zapisz"/>
+</form>
+
+</html>
+
+{#<p>#wyświetla#}
+{#    {{ operacja }}, {{ numer_zam }}#}
+{#    {{ lista }}#}
+{#</p>#}
+
+{#<ul>#}
+{#{% for ele in lista %}#}
+{#    {%  if ele == 456 %}#}
+{#        <li>{{ forloop.counter}} - {{ ele|add:50 }}</li>#}
+{#        <li>Daj znak</li>#}
+{#    {%  elif ele == "elo" %}#}
+{#        <li>{{ forloop.counter}} - {{ ele }}</li>#}
+{#        <li>Daj znak</li>#}
+{#    {%  else %}#}
+{#        <li>{{ forloop.counter}} - {{ ele }}</li>#}
+{#    {% endif %}#}
+{##}
+{#{% endfor %}#}
+{#</ul>#}

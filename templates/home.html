@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'homestyle2.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raptors | Kiosk</title>
+    <link rel="icon" type="image/x-icon" href="http://raptors.p.lodz.pl/favicon.png">
+    <script src="https://kit.fontawesome.com/ed8b51afb9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap&subset=latin-ext"
+        rel="stylesheet">
+</head>
+
+<body>
+{% if user.is_authenticated %}
+    <header>
+        <div class="change">
+            <a href="{% url 'logout' %}" class="logouter"><i class="fas fa-sign-out-alt"></i></a>
+            <p>{{ wybranykiosk.kiosk }}</p>
+        </div>
+        <img src="{% static "raptuś_Obszar roboczy 1.png" %}" alt="raptors logo">
+        <button class="help"><a href="{% url 'pomoc' %}"><i class="fas fa-question"></i></a></button>
+    </header>
+    <main>
+        <h2>Wybierz co chcesz zrobić:</h2>
+        <div class="btncontainer">
+            <button class="tasks call"><a href="{%  url 'poke' %}"><i class="fas fa-compress-arrows-alt"></i>Wezwij</a></button>
+            <button class="tasks"><a href="{% url 'robot_dismiss' %}"><i class="fas fa-sign-out-alt"></i>Wyślij do</a></button>
+            <button class="tasks"><a href="{% url 'free' %}"><i class="fas fa-sign-out-alt"></i>Zwolnij</a></button>
+            <button class="database"><a href="{% url 'data' %}"><i class="fas fa-database"></i>Zadania</a></button>
+        </div>
+    </main>
+<script src="{% static 'script.js' %}"></script>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+</body>
+
+</html>

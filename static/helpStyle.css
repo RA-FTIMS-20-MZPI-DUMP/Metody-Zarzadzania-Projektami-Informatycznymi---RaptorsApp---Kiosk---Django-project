@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #F59C1F;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1650px;
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header {
+    position: absolute;
+    top: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header img {
+    width: 16vw;
+    animation: start 3s .5s linear both;
+}
+
+body a.back {
+    position: absolute;
+    top: 4vh;
+    left: 4vh;
+    font-size: 50px;
+    transition: .3s;
+    animation: start 3s .5s linear both;
+}
+
+body a.back:hover {
+    font-size: 60px;
+}
+
+body form {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: start 3s .5s linear both;
+}
+
+body form input[type=text] {
+    display: inline-block;
+    width: 50vw;
+    height: 10vh;
+    border: 2px #F59C1F solid;
+    border-radius: 10%;
+    color: #000000;
+    background-color: #999999;
+    outline: none;
+    font-size: 30px;
+    text-align: center;
+}
+
+body form input[type=text]:focus {
+    background-color: #fff;
+    outline-color: #F29C15;
+}
+
+body form input[type=submit] {
+    display: inline-block;
+    margin-top: 3vh;
+    width: 25vh;
+    height: 10vh;
+    border: 2px #F59C15 solid;
+    background-color: transparent;
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+body form input[type=submit]:hover {
+    background-color: #F59C1F;
+    color: #323436;
+}
+
+form a.link {
+    display: block;
+    margin-top: 5vh;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+form a.link i {
+    margin-right: 1vh;
+    transition: .5s;
+}
+
+form a.link:hover{
+    color: #bbbbbb;
+}
+
+form a.link:hover i{
+    color: #bbbbbb;
+}
+
+form p {
+    margin-top: 4vh;
+}
+
+/*MEDIA QUERIES*/
+@media (orientation: landscape) and (max-width: 823px) {
+    body form input[type=submit] {
+        width: 50vh;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 1024px) {
+    header img {
+        width: 50vw;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 414px) {
+    header {
+        top: 7vh;
+    }
+}
+
+/*ANIMATIONS*/
+@keyframes start {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #F59C1F;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1650px;
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fa-brain {
+    display: block;
+    position: absolute;
+    top: 5vh;
+    left: 5vh;
+    font-size: 40px;
+    cursor: help;
+    transition: .5s;
+    animation: start 3s .5s linear both, blink 6s 3.5s linear infinite;
+}
+
+.choice {
+    position: absolute;
+    left: 3vh;
+    top: 13vh;
+    width: 11vh;
+    border: 1px #F59C1F solid;
+    opacity: 0;
+    transition: .5s;
+    text-align: center;
+}
+
+.fa-brain:hover {
+    color: #999999;
+    animation: none;
+}
+
+.fa-brain:hover ~ .choice {
+    opacity: 1;
+}
+
+header {
+    position: absolute;
+    top: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header img {
+    width: 12vw;
+    animation: start 3s .5s linear both;
+}
+
+main {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    animation: start 3s .5s linear both;
+}
+
+main h1 {
+    margin-bottom: 7vh;
+    text-transform: uppercase;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    margin: 5vh auto 5vh auto;
+    text-align: center;
+}
+
+main div a {
+    display: inline-block;
+    width: 100%;
+    padding: 3vh 0;
+    margin-bottom: 3vh;
+    border: 2px #F59C1F solid;
+    text-decoration: none;
+    font-size: 26px;
+    transition: .5s;
+}
+
+main div a i {
+    margin-right: .5vw;
+    transition: .5s;
+}
+
+main div a:hover {
+    background-color: #F59C1F;
+    color: #323436;
+}
+
+main div a:hover i {
+    color: #323436;
+}
+
+
+/*MEDIA QUERIES*/
+@media (orientation: landscape) and (max-width: 823px) {
+    .fa-brain {
+        display: none;
+    }
+
+    main div a {
+        font-size: 20px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+    main div a {
+        font-size: 15px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 414px) {
+    .fa-brain {
+        display: none;
+    }
+
+    header img {
+        width: 35vw;
+    }
+
+    main div a {
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 375px) {
+    main div a {
+        font-size: 12px;
+    }
+}
+
+
+/* ANIMATIONS */
+@keyframes start {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

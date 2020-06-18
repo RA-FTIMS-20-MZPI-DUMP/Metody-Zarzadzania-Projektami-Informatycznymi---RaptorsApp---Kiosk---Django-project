@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #F59C1F;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    max-width: 1650px;
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header {
+    position: absolute;
+    top: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: start 3s .5s linear both;
+}
+
+header img {
+    width: 16vw;
+}
+
+body a.back {
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
+    font-size: 50px;
+    transition: .3s;
+    animation: start 3s .5s linear both;
+}
+
+body a.back:hover {
+    font-size: 60px;
+}
+
+body div.optionsDiv {
+    display: flex;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: start 3s .5s linear both;
+}
+
+body div.optionsDiv div.priorityfilter {
+    margin-left: 2vw;
+}
+
+body div.optionsDiv div.searchfilter {
+    margin-left: 2vw;
+}
+
+body div.optionsDiv div.searchfilter input {
+    padding: 1px 10px;
+    background-color: transparent;
+    color: #bbbbbb;
+    text-transform: uppercase;
+    text-align: center;
+    outline: none;
+    border: 1px #F59C1F solid;
+}
+
+body div.optionsDiv div.searchfilter input::placeholder {
+    color: #999999;
+}
+
+body div.optionsDiv div.reloading {
+    margin-right: 1vw;
+    cursor: pointer;
+}
+
+body div.optionsDiv div.reloading i {
+    transition: 0.3s;
+}
+
+body div.optionsDiv div.reloading:hover i {
+    color: #999999;
+}
+
+body div.optionsDiv div select {
+    background-color: transparent;
+    color: #bbbbbb;
+    text-transform: uppercase;
+    text-align: center;
+    outline: none;
+    border: 1px #F59C1F solid;
+}
+
+table {
+    text-align: center;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    border-collapse: collapse;
+    border: 2px #F59C1F solid;
+    animation: start 3s .5s linear both;
+}
+
+td.title {
+    font-weight: 700;
+    color: #F59C1F;
+}
+
+body table tr.header td {
+    padding: 2px;
+    font-weight: 700;
+    color: #E46C1F;
+    cursor: pointer;
+}
+
+body table tr.header td i {
+    margin-left: 0.5vw;
+    font-size: 14px;
+    color: #E46C1F;
+    transition: 0.3s;
+}
+
+body table tr.header td:hover i {
+    color: #999999;
+}
+
+td {
+    padding: 2px;
+    color: #bbbbbb;
+}
+
+/*ANIMATIONS*/
+@keyframes start {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

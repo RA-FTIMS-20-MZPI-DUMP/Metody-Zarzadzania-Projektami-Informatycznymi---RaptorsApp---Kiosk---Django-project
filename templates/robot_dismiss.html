@@ -1,0 +1,32 @@
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dStyle.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dismiss</title>
+    <link rel="icon" type="image/x-icon" href="http://raptors.p.lodz.pl/favicon.png">
+    <script src="https://kit.fontawesome.com/ed8b51afb9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap&subset=latin-ext"
+        rel="stylesheet">
+</head>
+
+<body>
+{% if user.is_authenticated %}
+    <a href="{%  url 'select' %}" class="back"><i class="fas fa-chevron-circle-left"></i></a>
+    <header>
+        <img src="{% static "raptuś_Obszar roboczy 1.png" %}" alt="raptors logo">
+    </header>
+    <div>
+        <p class="select">Wybierz punkt docelowy</p>
+        <form method="POST" action="{%  url 'select' %}"> {% csrf_token %}
+        {{ form.as_p }}
+        <input onclick="redirect()" type="submit" value="Wybierz"/>
+        </form>
+    </div>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+</body>
+</html>

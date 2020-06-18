@@ -1,0 +1,326 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #F59C1F;
+
+}
+
+/* BODY */
+
+body {
+    max-width: 1650px;
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-right: 0;
+}
+
+/* HEADER */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+}
+
+header h3 {
+    position: absolute;
+    animation: start 3s .5s linear both;
+}
+
+header img {
+    position: absolute;
+    height: 45vh;
+    margin: 0 auto;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: start 3s .5s linear both;
+}
+
+button.help {
+    overflow: hidden;
+    position: absolute;
+    top: 4vh;
+    right: 3vw;
+    width: 5vw;
+    height: 5vw;
+    background-color: transparent;
+    border: 1px solid #F59C1F;
+    border-radius: 50%;
+    animation: start 3s 1.5s linear both;
+}
+
+button.help a {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5vw;
+    line-height: 5vw;
+    font-size: 50px;
+    text-align: center;
+    transition: .5s;
+}
+
+button.help a i {
+    transition: .5s;
+    transform-origin: 50% 100%;
+}
+
+button.help a:hover {
+    background-color: #F59C1F;
+}
+
+button.help a:hover i {
+    color: #323436;
+    animation: shake 2s .2s linear infinite;
+}
+
+/* MAIN */
+
+main {
+    position: relative;
+    height: 55vh;
+    width: 100%;
+    animation: start 3s 1s linear both;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 5vh;
+}
+
+main div.btncontainer {
+    display: flex;
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tasks,
+.database {
+    width: 28vw;
+    height: 8vw;
+    margin: 0 3vw;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid #F59C1F;
+    background-color: transparent;
+}
+
+
+main div.btncontainer a {
+    display: inline-block;
+    line-height: 8vw;
+    width: 28vw;
+    text-decoration: none;
+    transition: .5s;
+}
+
+main div.btncontainer i {
+    padding-right: 1vw;
+    background-color: transparent;
+    transition: .5s;
+}
+
+main div.btncontainer a:hover {
+    background-color: #F59C1F;
+    color: #323436;
+}
+
+main div.btncontainer a:hover i {
+    background-color: transparent;
+    color: #323436;
+}
+
+/* MEDIA QUERIES */
+
+@media (orientation: landscape) and (max-width: 1024px) {
+    main div.btncontainer a {
+        font-size: 18px;
+    }
+
+    button.help a {
+        font-size: 25px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 760px) {
+    main div.btncontainer a {
+        font-size: 13px;
+    }
+
+    button.help a {
+        font-size: 23px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 568px) {
+    h2 {
+        font-size: 18px;
+    }
+
+    main div.btncontainer a {
+        font-size: 11px;
+    }
+
+    button.help a {
+        font-size: 23px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 1024px) {
+    main div.btncontainer a {
+        font-size: 20px;
+    }
+
+    button.help a {
+        font-size: 23px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+
+    h2 {
+        font-size: 32px;
+    }
+
+    main div.btncontainer {
+        display: block;
+        text-align: center;
+    }
+
+    .tasks,
+    .database {
+        width: 45vw;
+        height: 20vw;
+    }
+
+    .tasks {
+        margin-top: -5vh;
+        margin-bottom: 5vh;
+    }
+
+    main div.btncontainer a {
+        font-size: 20px;
+        line-height: 20vw;
+        width: 45vw;
+    }
+
+    button.help a {
+        font-size: 20px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 414px) {
+
+    h2 {
+        font-size: 18px;
+    }
+
+    main div.btncontainer {
+        display: block;
+        text-align: center;
+    }
+
+    .tasks,
+    .database {
+        width: 45vw;
+        height: 20vw;
+    }
+
+    .tasks {
+        margin-bottom: 5vh;
+    }
+
+    main div.btncontainer a {
+        font-size: 12px;
+        line-height: 20vw;
+        width: 45vw;
+    }
+
+    button.help a {
+        font-size: 16px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 320px) {
+
+    h2 {
+        font-size: 15px;
+    }
+
+    main div.btncontainer {
+        display: block;
+        text-align: center;
+    }
+
+    .tasks,
+    .database {
+        width: 50vw;
+        height: 25vw;
+    }
+
+    .tasks {
+        margin-top: -5vh;
+        margin-bottom: 5vh;
+    }
+
+    main div.btncontainer a {
+        font-size: 12px;
+        line-height: 25vw;
+        width: 50vw;
+    }
+
+    button.help a {
+        font-size: 11px;
+    }
+}
+
+
+/* ANIMATIONS */
+@keyframes start {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes shake {
+    10% {
+        transform: rotate(20deg);
+    }
+
+    20% {
+        transform: rotate(0);
+    }
+
+    30% {
+        transform: rotate(-20deg);
+    }
+
+    40% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}

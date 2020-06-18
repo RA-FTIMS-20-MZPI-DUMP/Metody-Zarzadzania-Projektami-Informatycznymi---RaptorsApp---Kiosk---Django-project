@@ -1,0 +1,34 @@
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie</title>
+    <link rel="icon" type="image/x-icon" href="http://raptors.p.lodz.pl/favicon.png">
+    <script src="https://kit.fontawesome.com/ed8b51afb9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'selectStyle.css' %}">
+</head>
+
+<body>
+{% if user.is_authenticated %}
+    <i class="fas fa-brain"></i>
+    <p class="choice">Choose position where you are.</p>
+    <header>
+        <img src="{% static "raptuś_Obszar roboczy 1.png" %}" alt="raptors logo">
+    </header>
+    <main>
+        <h1>Wybierz kiosk</h1>
+        <div>
+            {% for i in form %}
+            <a href="{% url 'home' i.id %}"><i class="fas fa-map-marker-alt"></i>{{ i.kiosk }}</a>
+            {% endfor %}
+        </div>
+    </main>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'loginStyle.css' %}">
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="icon" type="image/x-icon" href="http://raptors.p.lodz.pl/favicon.png">
+    <script src="https://kit.fontawesome.com/ed8b51afb9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap&subset=latin-ext"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="{% static "raptuś_Obszar roboczy 1.png" %}" alt="raptors logo">
+    </header>
+    <div>
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Zaloguj</button>
+        </form>
+    </div>
+</body>
+</html>
