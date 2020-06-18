@@ -59,7 +59,7 @@ header {
 
 header img {
     width: 12vw;
-    animation: start 3s .5s linear both;
+    /*animation: start 3s .5s linear both;*/
 }
 
 main {
@@ -69,7 +69,7 @@ main {
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
-    animation: start 3s .5s linear both;
+    /*animation: start 3s .5s linear both;*/
 }
 
 main h1 {

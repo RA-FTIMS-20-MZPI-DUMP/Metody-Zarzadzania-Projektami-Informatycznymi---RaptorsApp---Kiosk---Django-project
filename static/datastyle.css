@@ -24,7 +24,7 @@ header {
     top: 3vh;
     left: 50%;
     transform: translateX(-50%);
-    animation: start 3s .5s linear both;
+    /*animation: start 3s .5s linear both;*/
 }
 
 header img {
@@ -37,7 +37,7 @@ body a.back {
     left: 2vh;
     font-size: 50px;
     transition: .3s;
-    animation: start 3s .5s linear both;
+    /*animation: start 3s .5s linear both;*/
 }
 
 body a.back:hover {
@@ -50,7 +50,7 @@ body div.optionsDiv {
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    animation: start 3s .5s linear both;
+    /*animation: start 3s .5s linear both;*/
 }
 
 body div.optionsDiv div.priorityfilter {
@@ -106,7 +106,7 @@ table {
     width: 50%;
     border-collapse: collapse;
     border: 2px #F59C1F solid;
-    animation: start 3s .5s linear both;
+    /*animation: start 3s .5s linear both;*/
 }
 
 td.title {
@@ -137,13 +137,49 @@ td {
     color: #bbbbbb;
 }
 
-/*ANIMATIONS*/
-@keyframes start {
-    0% {
-        opacity: 0;
+
+/* MEDIA QUERIES */
+
+@media (orientation: landscape) and (max-width: 1366px) {
+    body div.optionsDiv {
+        top: 14%;
     }
 
-    100% {
-        opacity: 1;
+    table {
+        top: 17%;
+        width: 60%;
     }
 }
+
+@media (orientation: portrait) and (max-width: 1024px) {
+    body div.optionsDiv {
+        top: 10%;
+    }
+
+    table {
+        top: 13%;
+        width: 70%;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+    body div.optionsDiv {
+        top: 9%;
+    }
+
+    table {
+        top: 15%;
+        width: 80%;
+    }
+}
+
+/*ANIMATIONS*/
+/*@keyframes start {*/
+/*    0% {*/
+/*        opacity: 0;*/
+/*    }*/
+
+/*    100% {*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/

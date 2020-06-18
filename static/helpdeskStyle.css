@@ -28,7 +28,7 @@ header {
 
 header img {
     width: 16vw;
-    animation: start 3s .5s linear both;
+    /*animation: start 3s .5s linear both;*/
 }
 
 body a.back {
@@ -37,7 +37,7 @@ body a.back {
     left: 4vh;
     font-size: 50px;
     transition: .3s;
-    animation: start 3s .5s linear both;
+    /*animation: start 3s .5s linear both;*/
 }
 
 body a.back:hover {
@@ -50,7 +50,7 @@ body form {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    animation: start 3s .5s linear both;
+    /*animation: start 3s .5s linear both;*/
 }
 
 body form input[type=text] {
@@ -135,12 +135,12 @@ form p {
 }
 
 /*ANIMATIONS*/
-@keyframes start {
-    0% {
-        opacity: 0;
-    }
+/*@keyframes start {*/
+/*    0% {*/
+/*        opacity: 0;*/
+/*    }*/
 
-    100% {
-        opacity: 1;
-    }
-}
+/*    100% {*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/

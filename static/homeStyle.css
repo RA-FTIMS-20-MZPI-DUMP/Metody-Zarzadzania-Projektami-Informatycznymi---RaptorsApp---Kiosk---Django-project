@@ -36,7 +36,7 @@ header {
 header div.change {
     margin-top: 2vh;
     line-height: 3vh;
-    animation: start 3s .5s linear both;
+    /*animation: start 3s .5s linear both;*/
 }
 
 header img {
@@ -46,7 +46,7 @@ header img {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    animation: start 3s .5s linear both;
+    /*animation: start 3s .5s linear both;*/
 }
 
 header a.logouter {
@@ -83,7 +83,7 @@ button.help {
     background-color: transparent;
     border: 1px solid #F59C1F;
     border-radius: 50%;
-    animation: start 3s 1.5s linear both;
+    /*animation: start 3s 1.5s linear both;*/
 }
 
 button.help a {
@@ -119,7 +119,7 @@ main {
     position: relative;
     height: 55vh;
     width: 100%;
-    animation: start 3s 1s linear both;
+    /*animation: start 3s 1s linear both;*/
 }
 
 h2 {
@@ -362,15 +362,15 @@ div.accept {
 
 
 /* ANIMATIONS */
-@keyframes start {
-    0% {
-        opacity: 0;
-    }
+/*@keyframes start {*/
+/*    0% {*/
+/*        opacity: 0;*/
+/*    }*/
 
-    100% {
-        opacity: 1;
-    }
-}
+/*    100% {*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/
 
 
 @keyframes shake {
